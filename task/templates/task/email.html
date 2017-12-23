@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{%extends 'task/base.html'%}
+{% block content%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>send email</h1>
+<form method="post" action="">
+    {% csrf_token %}
+    <table>
+        {{form.as_table}}
+
+    </table>
+     <input type="submit" value="send" >
+
+
+</form>
+{{form.subject}}
+
+</body>
+</html>
+{% endblock%}

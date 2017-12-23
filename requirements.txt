@@ -1,0 +1,5 @@
+Django==1.11     # web framework
+celery
+sqlalchemy
+psycopg2
+django-celery-beat
