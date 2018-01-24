@@ -1,30 +1,123 @@
 <!DOCTYPE html>
+{% load static %}
+<script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 <script language="javascript" type="text/javascript">
-    function sayhello(){
-        alert("hello word")
+
+
+
+    function checkscop(){
+       var myvar = "local";
+        document.getElementById("txt1").innerHTML="rasool";
+       //document.write(myvar," i am developer")
+
+    }
+    function over(){
+       document.write("mouse over")
+    }
+    function out(){
+       document.write("mouse out")
+    }
+    function WriteCookie(){
+       if( document.myform.customer.value == "" ){
+            alert("Enter some value!");
+       return;
+
+    }
+
+    function Readcookie(){
+      var allcookies = document.cookie;
+      document.write ("All Cookies : " + allcookies );
+      cookiearray= allcookies.split(';');
+      for(var i=0; i<cookiearray.length; i++){
+          name = cookiearray[i].split('=')[0];
+          value = cookiearray[i].split('=')[1];
+          document.write ("Key is : " + name + " and Value is : " + value);
+      }
     }
 
 </script>
 
 </head>
-<body>
+<body onload="checkscop()">
+
+<div id="txt1">
+    <h1>welcome</h1>
+</div>
+
 <h1>hi javascript</h1>
 <input type="button" onclick="sayhello()" value="say hello"/>
 <input type="text" name="age">
+
+
 <script>
-    var age1=age
-    if(age1>18){
-       document.write('age biger than 18')
+    var age=18
+    if(age>18){
+       document.write("age biger than 18")
     }
     else{
         document.write("age less 18")
     }
+    document.write(age)
+    var linkbreak = "<br/>";
+    var hr="<hr>";
+    document.write("<h1>hi rasool</h1>")
+    document.write(linkbreak)
+    document.write("hi js")
+    document.write(hr)
+    var a=3
+    var b=4
+    var c=a^b
+    document.write(c)
+    document.write(linkbreak)
+    var result=(a>b)? 200 :300
+    document.write(result)
+    document.write(hr)
+    var x=20
+    var y=10
+    var z=(x>y) ? (x+=y) : x-=y
+    document.write(z)
+    var grade="A";
+    document.write("entersian swich<br/>")
+    switch(grade){
+      case 'A':document.write("god jab<br/>")
+         break;
+      case 'B':document.write("god B")
+         break;
+    }
+    var count=2
+    while(count<30){
+       count++
+       document.write(count)
+    }
+
+
+
+
+
+
+
 
 </script>
+
+ <p>Bring your mouse inside the division to see the result:</p>
+ <div onmouseover="over()" onmouseout="out()">
+     <h2> This is inside the division </h2>
+ </div>
+<form name="myform" action="">
+    Enter Name:<input type="text" name="customer">
+    <input type="button" value="SET" onclick="WriteCookie()">
+</form>
+
+<form name="myform" action="">
+    <p>get cookies</p>
+    <input type="button" value="Get" onclick="Readcookie()">
+</form>
 
 </body>
 </html>

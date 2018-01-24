@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{%extends 'task/base.html'%}
+{%block css1%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" href="mystyle.css" media="all" />
+
+    <style type="text/css" media="all">
+          .ret h1{color:red;text-transform:uppercase;right:200px,line-height:125%;font-size:50px;background-color:blue}
+           p{color:red;direction:rtl;letter-spacing:5px}
+           a:hover{color:red}
+           a:active{color:#00ff23}
+           .scroll{
+             display:block;
+             border: 1px solid red;
+             padding:5px;
+             margin-top:5px;
+             width:300px;
+             height:50px;
+             overflow:scroll;
+           }
+           .auto{
+             display:block;
+             border: 1px solid red;
+             padding:5px;
+             margin-top:5px;
+             width:300px;
+             height:50px;
+             overflow:auto;
+           }
+    </style>
+
+</head>
+
+<body>
+
+
+
+<div class="ret">
+    <h1>csscode</h1>
+</div>
+<div class="table">
+    <table>
+        <td>
+            col
+        </td>
+        <td>
+            col2
+        </td>
+        <td>
+            col3
+        </td>
+    </table>
+</div>
+<p> the text is very good</p>
+<a href="home">home</a>
+
+<p>Move the mouse over the words to see the cursor change:</p>
+<div style="cursor:auto">Auto</div>
+<div style="cursor:crosshair">Crosshair</div>
+<div style="cursor:default">Default</div>
+<div style="cursor:pointer">Pointer</div>
+<div style="cursor:move">Move</div>
+<div style="cursor:e-resize">e-resize</div>
+<div style="cursor:ne-resize">ne-resize</div>
+<div style="cursor:nw-resize">nw-resize</div>
+<div style="cursor:text">text</div>
+<div style="cursor:wait">wait</div>
+<div style="cursor:help">help</div>
+<p style="outline-width:5px; outline-style:solid;">
+This text is having 5x outline.
+
+</p>
+<p style="border-style:groove;border-bottom:10px">
+    i am study book
+    i enjoy from css
+    i like learn javascript
+</p>
+<p style="width:400px; height:100px;border:5px solid red;
+padding:20px; margin:20px;">
+This paragraph is 400pixels wide and 100 pixels high
+</p>
+<div class="scroll">
+I am going to keep lot of content here just to show
+you how scrollbars works if there is an overflow in
+an element box. This provides your horizontal as well
+as vertical scrollbars.
+</div>
+<div class="auto">
+I am going to keep lot of content here just to show
+you how scrollbars works if there is an overflow in
+an element box. This provides your horizontal as well
+as vertical scrollbars.
+</div>
+<div style="position:relative;left:130px;top:20px;
+background-color:yellow;">
+This div has relative positioning.
+</div>
+</body>
+</html>
+{% endblock %}
